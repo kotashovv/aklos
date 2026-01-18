@@ -540,7 +540,7 @@ section {
           box-sizing: border-box;
   position: relative;
   background-color: #fff;
-  background-image: url(/assets/imgs/main-decor.png);
+  background-image: url(../../assets/imgs/main-decor.png);
   background-position: right center;
   background-size: auto;
   background-repeat: no-repeat;
@@ -800,7 +800,7 @@ section {
 
 .why {
   padding: 100px 0;
-  background-image: url(/assets/imgs/decor-black.png);
+  background-image: url(../../assets/imgs/decor-black.png);
   background-size: auto;
   background-repeat: no-repeat;
   background-position: center left;
@@ -887,7 +887,7 @@ section {
   padding: 100px 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background-image: url(/assets/imgs/decor-black.png);
+  background-image: url(../../assets/imgs/decor-black.png);
   background-size: auto;
   background-position: right center;
   background-repeat: no-repeat;
@@ -1277,7 +1277,7 @@ section {
           box-sizing: border-box;
   padding: 40px 45px;
   border-radius: 10px;
-  background-image: url(/assets/imgs/decor-black.png);
+  background-image: url(../../assets/imgs/decor-black.png);
   background-size: auto;
   background-position: left center;
   background-repeat: no-repeat;
