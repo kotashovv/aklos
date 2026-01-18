@@ -1,0 +1,171 @@
+.best {
+    background-color: #F8F8F8;
+    padding: 100px 0;
+    box-sizing: border-box;
+
+    // .best__title
+
+    &__title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 50px;
+    }
+
+    // .best__nav
+
+    &__nav {
+        button {
+            padding: 0;
+            cursor: pointer;
+            border: none;
+            padding: 0;
+            width: 50px;
+            background-color: transparent;
+            height: 50px;
+
+            svg {
+                display: block;
+                width: 50px;
+                height: 50px;
+            }
+
+            &:last-child {
+                svg {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+    }
+
+    // .best__slider
+
+    &__slider {
+        .swiper-slide {
+            height: 462px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            color: #fff;
+            padding: 20px;
+            box-sizing: border-box;
+            box-sizing: border-box;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: relative;
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-color: #00000030;
+                z-index: -1;
+                pointer-events: none;
+            }
+
+            .text {
+                h3 {
+                    font-size: 24px;
+                    line-height: 1;
+                    font-weight: 600;
+                    margin: 0;
+                    margin-bottom: 10px;
+                    position: relative;
+                    z-index: 2;
+                }
+
+                ul {
+                    list-style: none;
+                    margin: 0;
+                    padding: 0;
+                    margin-bottom: 20px;
+
+                    li {
+                        position: relative;
+                        font-size: 16px;
+                        color: #fff;
+                        line-height: 1;
+                        margin-bottom: 25px;
+                        padding-left: 10px;
+
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            width: 3px;
+                            height: 3px;
+                            background-color: #fff;
+                            border-radius: 50%;
+                            left: 0;
+                            top: calc(50% - 2.5px);
+                        }
+
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+
+                .action {
+                    display: flex; 
+                    align-items: center;
+                    gap: 20px;
+
+                    a {
+                        padding: 10px;
+                        font-size: 20px;
+                        background-color: #000;
+
+                        color: #fff;
+                        text-decoration: none;
+                        text-align: center;
+
+                    }
+                    span {
+                        background-color: #fff;
+                        color: #000;
+                        text-align: center;
+                        width: 100%;
+                        box-sizing: border-box;
+                        display: block;
+                        padding: 10px;
+                        font-size: 20px;
+                        font-weight: 400;
+                        z-index: 2;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+.container {}
+
+.section-title {}
+
+.title-text {}
+
+.slider-nav {}
+
+.best-nav-btn {}
+
+.best-nav-prev {}
+
+.slider-arrow {}
+
+.best-nav-next {}
+
+.swiper {}
+
+.swiper-wrapper {}
+
+.swiper-slide {}
+
+.text {}
+
+.action {}
+
+.price-item {}

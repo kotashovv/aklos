@@ -1,0 +1,75 @@
+.steps {
+    padding: 100px 0;
+    box-sizing: border-box;
+    background-image: url(/assets/imgs/decor-black.png);
+    background-size: auto;
+    background-position: right center;
+    background-repeat: no-repeat;
+    // .steps__title
+
+    &__title {}
+
+    .items {
+        display: flex;
+
+        .item {
+            color: var(--main-color);
+
+            box-sizing: border-box;
+            padding: 35px;
+            border-radius: 0 100px 0 0;
+
+            font-family: 'Unbounded';
+            width: 25%;
+            transition: .35s ease;
+
+            &:hover {
+                color: #fff;
+                background-color: var(--main-color);
+
+                p {
+                    color: #fff;
+                }
+            }
+
+            span {
+                font-weight: 500;
+                font-size: 128px;
+                line-height: 100%;
+                display: block;
+                transition: .35s ease;
+
+                margin-bottom: 10px;
+            }
+
+            h3 {
+                display: block;
+                font-size: 24px;
+                line-height: 1;
+                font-weight: 500;
+                transition: .35s ease;
+
+            }
+
+            p {
+                font-family: 'Montserrat', sans-serif;
+                font-size: 16px;
+                line-height: 1;
+                margin: 0;
+                transition: .35s ease;
+                display: block;
+                color: #7A7A7A;
+            }
+        }
+    }
+}
+
+.container {}
+
+.section-title {}
+
+.title-text {}
+
+.items {}
+
+.item {}

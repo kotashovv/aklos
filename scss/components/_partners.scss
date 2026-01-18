@@ -1,0 +1,42 @@
+.partners {
+    padding: 100px 0;
+    box-sizing: border-box;
+    
+    // .partners__title
+
+    &__title {
+        h2 {
+            margin: 0;
+            display: block;
+            font-weight: 500;
+            font-size: 38px;
+            color: #3d3d3d;
+            text-align: center;
+            line-height: 1.2;
+            font-family: 'Unbounded', sans-serif;
+        }
+    }
+
+    // .partners__items
+
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin: 0 -15px;
+        margin-top: 40px;
+        .item {
+            box-sizing: border-box;
+            margin: 0 15px 30px;
+            width: calc(20% - 30px);
+            img {
+                display: block;
+                width: 100%;
+            }
+        }
+    }
+}
+
+.container {}
+
+.item {}
