@@ -8,4 +8,9 @@ document.addEventListener('DOMContentLoaded', ()=>{
         slidesPerView: 2.2,
         spaceBetween: 20,
     })
+
+    const feedBack = new Swiper('.feedback__slider', {
+        slidesPerView: 2.8,
+        spaceBetween: 20,
+    })
 })
