@@ -946,6 +946,9 @@ section {
 .catalog {
   padding: 100px 0;
 }
+.catalog__title {
+  margin-bottom: 50px;
+}
 .catalog__body {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1457,4 +1460,167 @@ section {
 .footer__col:first-child a svg {
   width: 100%;
   display: block;
+}
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1882352941);
+  z-index: 10;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  -webkit-transition: 0.35s ease;
+  transition: 0.35s ease;
+}
+.popup.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+}
+.popup.active .popup__item {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
+}
+.popup__item {
+  max-width: 1200px;
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-color: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+  padding: 40px 60px;
+  opacity: 0;
+  -webkit-transform: translateY(30px);
+      -ms-transform: translateY(30px);
+          transform: translateY(30px);
+  visibility: visible;
+}
+.popup__item .popup-close-btn {
+  position: absolute;
+  top: 0;
+  right: -80px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.popup__item .popup-item__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.popup__item .popup-item__body .img {
+  max-width: 400px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: auto;
+}
+.popup__item .popup-item__body .img img {
+  display: block;
+  max-width: 100%;
+}
+.popup__item .popup-item__body .text {
+  max-width: 520px;
+  width: 100%;
+  margin-left: 50px;
+}
+.popup__item .popup-item__body .text h3 {
+  margin: 0;
+  display: block;
+  color: #1F1F1F;
+  opacity: 0.5;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+.popup__item .popup-item__body .text ul {
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+.popup__item .popup-item__body .text ul li {
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1254901961);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+.popup__item .popup-item__body .text ul li:last-child {
+  border-bottom: none;
+}
+.popup__item .popup-item__body .text ul li span:first-child {
+  color: #7D7D7D;
+  font-size: 16px;
+  display: block;
+  margin-right: 40px;
+}
+.popup__item .popup-item__body .text ul li span:last-child {
+  color: #3D3D3D;
+  line-height: 1;
+  display: block;
+  text-align: right;
+}
+.popup__item .popup-item__body .text .action {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  gap: 10px;
+}
+.popup__item .popup-item__body .text .action > * {
+  max-width: 150px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 16px;
+  border-radius: 2px;
+}
+.popup__item .popup-item__body .text .action span {
+  color: #000;
+}
+.popup__item .title h2 {
+  color: #1F1F1F;
+  display: block;
+  font-size: 38px;
+  line-height: 1.2;
+  font-family: "Unbounded";
+  margin: 0;
 }
