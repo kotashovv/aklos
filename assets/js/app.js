@@ -1,10 +1,69 @@
 document.addEventListener('DOMContentLoaded', () => {
+
+    const burgerBtn = document.querySelector('.burger-btn');
+    const mobileMenu = document.querySelector('.mobile-menu');
+
+    if (burgerBtn && mobileMenu) {
+
+        burgerBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+
+            if (burgerBtn.classList.contains('active')) {
+                CloseMenu();
+            } else {
+                OpenMenu();
+            }
+        });
+
+        document.addEventListener('click', (e) => {
+            if (
+                mobileMenu.classList.contains('active') &&
+                !mobileMenu.contains(e.target) &&
+                !burgerBtn.contains(e.target)
+            ) {
+                CloseMenu();
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
+                CloseMenu();
+            }
+        });
+    }
+
+    function OpenMenu() {
+        burgerBtn.classList.add('active');
+        mobileMenu.classList.add('active');
+    }
+
+    function CloseMenu() {
+        burgerBtn.classList.remove('active');
+        mobileMenu.classList.remove('active');
+    }
+
+
     const bestSlider = new Swiper('.best__slider', {
-        slidesPerView: 4,
         spaceBetween: 20,
         navigation: {
             nextEl: '.best-nav-next',
             prevEl: '.best-nav-prev',
+        },
+        breakpoints: {
+            0: {
+                slidesPerView: 1.2,
+                spaceBetween: 10,
+            },
+            620: {
+                slidesPerView: 2.2,
+            },
+            920: {
+                slidesPerView: 3.2,
+            },
+            1200: {
+                slidesPerView: 4,
+            }
+
         }
     })
 
@@ -14,6 +73,18 @@ document.addEventListener('DOMContentLoaded', () => {
         navigation: {
             prevEl: '.sales-prev',
             nextEl: '.sales-next',
+        },
+        breakpoints: {
+            0: {
+                slidesPerView: 1.2,
+                spaceBetween: 10,
+            },
+            920: {
+                slidesPerView: 1.5,
+            },
+            1200: {
+                slidesPerView: 2.2,
+            },
         }
     })
 
@@ -23,6 +94,18 @@ document.addEventListener('DOMContentLoaded', () => {
         navigation: {
             prevEl: '.feedback-btn-prev',
             nextEl: '.feedback-btn-next',
+        },
+        breakpoints: {
+            0: {
+                slidesPerView: 1.2,
+            },
+            920: {
+                slidesPerView: 2.2,
+            },
+            1200: {
+                slidesPerView: 2.8,
+            }
+
         }
     })
 
@@ -108,3 +191,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 })
+
+const dynamicAdaptive = new DynamicAdaptive('max');
+dynamicAdaptive.init();

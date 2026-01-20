@@ -13,6 +13,7 @@
         .text {
             max-width: 500px;
             margin-right: auto;
+            width: 40%;
             h3 {
                 font-weight: 500;
                 font-family: 'Unbounded', sans-serif;
@@ -51,6 +52,7 @@
                 }
                 .item-name {
                     margin-right: auto;
+                    min-width: 230px;
                     h3 {
                         font-family: 'Unbounded', sans-serif;
                         margin: 0;
@@ -73,6 +75,49 @@
                         font-weight: 300;
                         font-size: 18px;
                         opacity: .7;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media(max-width:920px) {
+    .why {
+        padding: 60px 0;
+        box-sizing: border-box;
+        background-size: 420px auto;
+        background-position: top left;
+        &__body {
+            flex-direction: column;
+            .text {
+                margin: 0 0 20px;
+                max-width: 420px;
+                width: 100%;
+            }
+            .list {
+                margin:  0;
+                max-width: none;
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media(max-width:620px) {
+    .why {
+        &__body {
+            .list {
+                .item {
+                    flex-direction: column;
+                    .item-name {
+                        margin: 0 0 20px;
+                    }
+                    .item-text {
+                        margin: 0;
+                        max-width: none;
+                        width: 100%;
                     }
                 }
             }

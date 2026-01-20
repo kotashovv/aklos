@@ -23,6 +23,7 @@
         border-radius: 20px;
         color: #fff;
         max-height: 400px;
+        display: none;
         animation: blink 2s infinite;
     }
 
@@ -34,10 +35,12 @@
         flex-wrap: wrap;
         box-sizing: border-box;
         width: calc(100% + 24px);
+
         .item {
             width: calc(25% - 24px);
             margin: 0 12px 24px;
             box-sizing: border-box;
+
             .img {
                 box-sizing: border-box;
                 width: 100%;
@@ -45,34 +48,41 @@
                 border-radius: 10px;
                 padding: 20px;
                 margin-bottom: 15px;
+
                 img {
                     display: block;
                     width: 100%;
                     height: 100%;
                     object-fit: contain;
                 }
+
                 background-color: #fff;
             }
+
             .text {
                 margin-bottom: 20px;
-                 h2 {
+
+                h2 {
                     display: block;
                     color: #1f1f1f;
                     font-size: 16px;
                     font-weight: 600;
                     margin: 0;
                     margin-bottom: 10px;
-                 }
-                 ul {
+                }
+
+                ul {
                     margin: 0;
                     padding: 0;
                     list-style: none;
+
                     li {
                         font-weight: 300;
                         position: relative;
                         margin-bottom: 5px;
                         position: relative;
                         padding-left: 10px;
+
                         &::before {
                             content: '';
                             position: absolute;
@@ -83,32 +93,36 @@
                             background-color: #1f1f1f;
                             border-radius: 50%;
                         }
-                        &:last-child{
+
+                        &:last-child {
                             margin-bottom: 0;
                         }
                     }
-                 }
+                }
             }
+
             .action {
                 display: flex;
                 align-items: stretch;
                 gap: 20px;
                 width: 100%;
+
                 span {
-                   color: var(--main-color); 
-                   border: var(--main-color);
-                   font-weight: 400;
-                   font-size: 18px;
-                   border: 1px solid;
-                   display: flex;
-                   align-items: center;
-                   line-height: 1;
-                   padding: 12px ;
-                   width: 50%;
-                   text-align: center;
-                   justify-content: center;
-                   border-radius: 0;
+                    color: var(--main-color);
+                    border: var(--main-color);
+                    font-weight: 400;
+                    font-size: 18px;
+                    border: 1px solid;
+                    display: flex;
+                    align-items: center;
+                    line-height: 1;
+                    padding: 12px;
+                    width: 50%;
+                    text-align: center;
+                    justify-content: center;
+                    border-radius: 0;
                 }
+
                 a {
                     font-size: 18px;
                     width: 50%;
@@ -138,20 +152,36 @@
 
 }
 
-.container {}
+@media(max-width: 1200px) {
+    .catalog {
+        &__items {
+            .item {
+                width: calc(33.33% - 24px);
 
-.section-title {}
+            }
+        }
+    }
+}
 
-.title-text {}
-
-.item {}
-
-.img {}
-
-.text {}
-
-.action {}
-
-.price {}
-
-.main-btn {}
+@media(max-width:920px) {
+    .catalog {
+        padding: 60px 0;
+        &__items {
+            .item {
+                width: calc(50% - 24px);
+            }
+        }
+    }
+}
+@media(max-width:620px) {
+    .catalog {
+        padding: 40px 0;
+        &__items {
+            margin: 0;
+            .item {
+                width: 100%;
+                margin: 0 0 24px;
+            }
+        }
+    }
+}

@@ -3,6 +3,13 @@
   padding: 100px 0;
   box-sizing: border-box;
 
+  @media(max-width:920px) {
+    padding: 60px 0;
+  }
+  @media(max-width:620px) {
+    padding: 40px 0;
+  }
+
   &__title {
     align-items: flex-end;
     margin-bottom: 50px;
@@ -119,24 +126,4 @@
       }
     }
   }
-}
-.container {
-}
-.section-title {
-}
-.text {
-}
-.title-text {
-}
-.slider-arrow {
-}
-.feedback-btn-prev {
-}
-.feedback-btn-next {
-}
-.swiper {
-}
-.swiper-wrapper {
-}
-.swiper-slide {
 }

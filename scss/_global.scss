@@ -62,7 +62,15 @@ section {
         color: #1f1f1f;
         margin: 0;
         display: block;
-
+        @media(max-width:1200px) {
+            font-size: 36px;
+        }
+        @media(max-width:920px) {
+            font-size: 32px;
+        }
+        @media(max-width:620px) {
+            font-size: 24px;
+        }
     }
     .slider-nav {
         display: flex;
@@ -72,6 +80,7 @@ section {
             border: none;
             background-color: transparent;
             width: 50px;
+            padding: 0;
             height: 50px;
             &:last-child {
                 svg {

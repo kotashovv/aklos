@@ -54,6 +54,7 @@
             background-repeat: no-repeat;
             background-position: center;
             position: relative;
+
             &::before {
                 content: '';
                 position: absolute;
@@ -109,7 +110,7 @@
                 }
 
                 .action {
-                    display: flex; 
+                    display: flex;
                     align-items: stretch;
                     gap: 20px;
 
@@ -125,6 +126,7 @@
                         border-radius: 0;
 
                     }
+
                     span {
                         background-color: #fff;
                         color: #000;
@@ -147,30 +149,29 @@
     }
 }
 
-.container {}
+@media(max-width:920px) {
+    .best {
+        &__slider {
+            .swiper-slide {
+                height: 420px;
 
-.section-title {}
+                .text {
+                    .action {
+                        flex-direction: column-reverse;
+                        gap: 10px;
 
-.title-text {}
+                        a,
+                        span {
+                            text-align: center;
+                            width: 100%;
+                            box-sizing: border-box;
+                            margin: 0;
 
-.slider-nav {}
-
-.best-nav-btn {}
-
-.best-nav-prev {}
-
-.slider-arrow {}
-
-.best-nav-next {}
-
-.swiper {}
-
-.swiper-wrapper {}
-
-.swiper-slide {}
-
-.text {}
-
-.action {}
-
-.price-item {}
+                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

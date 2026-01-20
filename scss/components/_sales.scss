@@ -62,3 +62,50 @@
         }
     }
 }
+
+
+@media(max-width:920px) {
+    .sales {
+        padding: 60px 0;
+        box-sizing: border-box;
+        
+    }
+}
+
+@media(max-width:768px) {
+    .sales {
+        padding: 40px 0;
+        &__swiper {
+            .swiper-slide {
+                position: relative;
+                overflow: hidden;
+                .text {
+                    width: 100%;
+                    margin-right: 0;
+                    max-width: none;
+                    p {
+                        color: #000;
+                    }
+                }
+                .img {
+                    position: absolute;
+                    width: 50%;
+                    bottom: -40px;
+                    opacity: .3;
+                    right: -40px;
+                    z-index: -1;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:620px) {
+    .sales {
+        &__swiper {
+            .swiper-slide {
+                padding: 20px;
+            }
+        }
+    }
+}
